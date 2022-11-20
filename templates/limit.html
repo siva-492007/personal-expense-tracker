@@ -1,0 +1,19 @@
+
+
+{% extends 'base.html' %}
+
+{% block body %} 
+
+<div style="display:flex;flex-wrap:wrap;justify-content:center;margin:5rem;padding:5rem;">
+    <h4> Currently your monthly limit is ₹ {{y}} </h4> 
+    <div style="flex-basis:100%;height: 0;"></div>
+    <form action="/limitnum" method="POST"> <br>
+        <h4> Enter your montly limit</h4> <br>
+        <input type="number" name="number" placeholder="Set Limit in INR" min="0" required/> 
+        <span> 
+            <button class="btn btn-warning" type="submit">Set Limit</button>
+        </span>
+    </form>
+</div>
+
+{% endblock %}
